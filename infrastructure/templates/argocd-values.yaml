@@ -1,0 +1,18 @@
+server:
+  ingress:
+    enabled: true
+    hosts:
+    - argo.test
+  extraArgs:
+  - --insecure
+  extensions:
+    enabled: true
+configs:
+  secret:
+    # Warning! This is for demo purposes only. Do not use this in production.
+    argocdServerAdminPassword: "$2y$10$DCtXiBLCXVlyMa36SCZrOuE.LvjRnbgFa00ndjX3j9WPQc3PdKGsq" # admin
+redis-ha:
+  enabled: false
+crds:
+  install: true
+  keep: false
